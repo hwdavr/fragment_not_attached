@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FragmentNotAttached</string>
+    <string name="status">Status</string>
+    <string name="pop_up_dialog">Show pop up</string>
+    <string name="bottom_sheet">Show bottom sheet fragment</string>
+    <string name="waiting_api">Waiting for API response</string>
+    <string name="error_not_found">Server not found!</string>
+    <string name="imported_photos_from_camera">Imported 10 photos from Camera</string>
+    <string name="imported_photos_from_gallery">Imported 10 photos from Gallery</string>
+    <string name="importing_photos">Importing...Please wait</string>
+</resources>
