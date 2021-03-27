@@ -26,3 +26,14 @@ Below is the crash log:
 2021-03-27 14:04:00.220 22028-22028/com.dialog.fragmentnotattached I/Process: Sending signal. PID: 22028 SIG: 9
 
 ```
+
+## Solution
+
+Create below method inside `BaseFragment`, and call it after any async task. 
+```
+    fun checkIfFragmentAttached(operation: Context.() -> Unit) {
+        if (isAdded && context != null) {
+            operation(requireContext())
+        }
+    }
+```
