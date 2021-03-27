@@ -16,8 +16,9 @@ import kotlinx.coroutines.*
 
 class TestFragment : BaseFragment() {
     private var tvStatus: TextView? = null
+    private val job = Job()
     private val coroutineScope: CoroutineScope
-        get() = CoroutineScope(Job() + Dispatchers.Main)
+        get() = CoroutineScope(job + Dispatchers.Main)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -101,7 +102,8 @@ class TestFragment : BaseFragment() {
     }
 
     override fun onDestroy() {
-        coroutineScope.cancel()
+        // To easily simulate the issue, the coroutine scope is not cancel
+        //coroutineScope.cancel()
         super.onDestroy()
     }
 

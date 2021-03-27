@@ -1,6 +1,7 @@
 package com.dialog.fragmentnotattached
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,8 @@ class MainFragment : BaseFragment() {
     }
 
     companion object {
+        private const val TAG = "MainFragment"
+
         fun newInstance() = MainFragment()
     }
 }
